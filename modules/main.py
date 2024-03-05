@@ -51,14 +51,15 @@ def mask_card(card_account):
         # Здесь и так понятно :)
         return "Счет **"+card_account[-4:]
     else:
-        # Делим номер карты на список с частями имени и номер и кладем в список card. Далее разделяем номер на нужные
-        # фрагменты с номером и маской получаем список card_octets_list.
-        # Далее склеиваем список с частями имени карты с элементами списка card_octets_list.
+        # Делим номер карты на список с частями имени и номером и кладем в список card. Далее разделяем номер на нужные
+        # фрагменты с цифрами и получаем маскированный номер карты card_number.
+        # Далее склеиваем список с частями имени карты с маскированным номером карты.
+        # len_card - количество элементов в списке card.
+
         card = card_account.split(" ")
-        len_card = len(card_account.split())
-        card_number = card[-1]
-        card_number = card_number[0:4] + " " + card_number[4:6]+'** ****' + " " + card_number[-4:]
-        return card_number
+        len_card = len(card)
+        card_number = card[-1][0:4] + " " + card[-1][4:6]+'** ****' + " " + card[-1][-4:]
+        return " ".join(card[0:len_card - 1])+" " + card_number
 
 
 def create_operation_objects(path):
@@ -99,7 +100,7 @@ def main():
         # метод get_date() класса Operation выводит дату в формате dd.mm.yyyy, get_description - описание операции
         # метод get_payer() выводит счет или карту плательщика, get_receiver() - получателя.
         # функция mask_card() перед выводом накладывает маску (*) на часть номера карты или счета.
-        # метод get_amount() выводит сумму баковской операции.
+        # метод get_amount() выводит сумму банковской операции.
         print(operations_objects[i].get_date()+' '+operations_objects[i].get_description())
         if operations_objects[i].get_payer() is None:
             print(mask_card(operations_objects[i].get_receiver()))
