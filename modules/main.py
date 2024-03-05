@@ -48,18 +48,21 @@ class Operation:
 def mask_card(card_account):
     """Возвращает номера карты или счета в маске."""
     if card_account[:4] == 'Счет':
-        # здесь и так понятно :)
+        # Здесь и так понятно :)
         return "Счет **"+card_account[-4:]
     else:
-        # делим название карты и номер на список, разделяем номер карты по четыре номера и маскируем номер
-        # символам '*' затем соединяем части наименования карты с его замакированным номером.
+        # Делим номер карты на список с частями имени и номер и кладем в список card. Далее разделяем номер на нужные
+        # фрагменты с номером и маской получаем список card_octets_list.
+        # Далее склеиваем список с частями имени карты с элементами списка card_octets_list.
         card = card_account.split(" ")
         len_card = len(card_account.split())
-        card_name = ' '.join(card[0:len_card - 1])+' '
         card_number = card[-1]
-        private_number = card_number[:6] + (len(card_number[6:-4]) * '*') + card_number[-4:]
-        chunks, chunk_size = len(private_number), len(private_number) // 4
-        return card_name + " ".join([private_number[i:i + chunk_size] for i in range(0, chunks, chunk_size)])
+
+        card_octets_list = []
+        card_octets_list.append(card_number[0:4])
+        card_octets_list.append(card_number[4:6]+'** ****')
+        card_octets_list.append(card_number[-4:])
+        return " ".join(card[0:len_card - 1])+" " + " ".join(card_octets_list)
 
 
 def create_operation_objects(path):
