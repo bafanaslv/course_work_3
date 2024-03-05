@@ -57,12 +57,8 @@ def mask_card(card_account):
         card = card_account.split(" ")
         len_card = len(card_account.split())
         card_number = card[-1]
-
-        card_octets_list = []
-        card_octets_list.append(card_number[0:4])
-        card_octets_list.append(card_number[4:6]+'** ****')
-        card_octets_list.append(card_number[-4:])
-        return " ".join(card[0:len_card - 1])+" " + " ".join(card_octets_list)
+        card_number = card_number[0:4] + " " + card_number[4:6]+'** ****' + " " + card_number[-4:]
+        return card_number
 
 
 def create_operation_objects(path):
