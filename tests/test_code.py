@@ -1,9 +1,43 @@
+import json
 import os
+import pytest
 from os.path import dirname
 from modules.main import load_json_file, create_operation_objects, mask_card, Operation
 
 OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', 'operations.json')
 operation_list = load_json_file(OPERATION_JSON_FILE)
+
+
+test_json_list = [
+  {
+    "id": 441945886,
+    "state": "EXECUTED",
+    "date": "2019-08-26T10:50:58.294041",
+    "operationAmount": {
+      "amount": "31957.58",
+      "currency": {
+        "name": "руб.",
+        "code": "RUB"
+      }
+    },
+    "description": "Перевод организации",
+    "from": "Maestro 1596837868705199",
+    "to": "Счет 64686473678894779589"
+  }
+]
+
+dict_json = json.load(test_json_list)
+
+
+@pytest.fixture
+def test_list():
+    return [Operation(json_list.get("id"),
+    json_list.get("state"),
+    json_list.get("date"),
+    json_list.get("operationAmount"),
+    json_list.get("description"),
+    json_list.get("from"),
+    json_list.get("to")) for json_list in dict_json]
 
 
 def test_load_json_file():
@@ -26,7 +60,3 @@ def test_mask_card():
     assert mask_card('Visa Gold 7305799447374042') == 'Visa Gold 7305 79** **** 4042'
     assert mask_card('Maestro 4598300720424501') == 'Maestro 4598 30** **** 4501'
     assert mask_card('Счет 97584898735659638967') == 'Счет **8967'
-
-
-def test_get_date():
-    assert Operation.get_date(self='2018-09-12T21:27:25.241689') == '02.11.2024'
