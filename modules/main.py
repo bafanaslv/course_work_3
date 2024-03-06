@@ -5,7 +5,6 @@ import os.path
 import json
 import os
 import datetime
-from datetime import strptime
 from os.path import dirname
 
 OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', 'operations.json')
@@ -100,7 +99,7 @@ def main():
     """create_operation_objects создает список объектов операций, сортирует список по дата (x.date)
     и выводит результаты операций в требуемом виде."""
     operations_objects = create_operation_objects(OPERATION_JSON_FILE)
-    operations_objects.sort(key=lambda x: datetime.strptime(x.date, "%Y-%m-%d"), reverse=True)
+    operations_objects.sort(key=lambda x: datetime.datetime.strptime(x.date, "%Y-%m-%dT%H:%M:%S.%f"), reverse=True)
     # i - счетчик операций
     # quantity - количество элементов списка которое нужно обработать
     ind = 0
