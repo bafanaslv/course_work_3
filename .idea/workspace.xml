@@ -52,11 +52,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "develop",
-    "last_opened_file_path": "C:/Users/Slava.ZDSHIP/PycharmProjects/Sky-python",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
+    "last_opened_file_path": "C:/Users/Slava/PycharmProjects/Skypro",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.pytest for test_code.test_get_date">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
@@ -149,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python tests.pytest for test_code.test_get_date" />
         <item itemvalue="Python tests.pytest for test_code.test_create_operation_objects" />
         <item itemvalue="Python tests.pytest for test_code.test_load_json_file" />
         <item itemvalue="Python tests.pytest for test_code.test_mask_card" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +267,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tests/test_code.py</url>
-          <line>8</line>
+          <line>42</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
