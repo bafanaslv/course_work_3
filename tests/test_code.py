@@ -1,11 +1,10 @@
-import json
-import os
 import pytest
+import os
 from os.path import dirname
-from modules.main import load_json_file, create_operation_objects, mask_card, Operation
+from modules.main import create_operation_objects, mask_card, Operation
 
 OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', 'operations.json')
-operation_list = load_json_file(OPERATION_JSON_FILE)
+# operation_list = load_json_file(OPERATION_JSON_FILE)
 
 
 test_json_list = [
@@ -26,29 +25,16 @@ test_json_list = [
   }
 ]
 
-dict_json = json.load(test_json_list)
 
-
-@pytest.fixture
-def test_list():
-    return [Operation(json_list.get("id"),
-    json_list.get("state"),
-    json_list.get("date"),
-    json_list.get("operationAmount"),
-    json_list.get("description"),
-    json_list.get("from"),
-    json_list.get("to")) for json_list in dict_json]
-
-
-def test_load_json_file():
-    assert isinstance(operation_list, list)
-    assert len(operation_list) > 0
-    assert "id" in operation_list[0]
-    assert "state" in operation_list[0]
-    assert "date" in operation_list[0]
-    assert "operationAmount" in operation_list[0]
-    assert "description" in operation_list[0]
-    assert "to" in operation_list[0]
+# def test_load_json_file():
+#     assert isinstance(operation_list, list)
+#     assert len(operation_list) > 0
+#     assert "id" in operation_list[0]
+#     assert "state" in operation_list[0]
+#     assert "date" in operation_list[0]
+#     assert "operationAmount" in operation_list[0]
+#     assert "description" in operation_list[0]
+#     assert "to" in operation_list[0]
 
 
 def test_create_operation_objects():
@@ -60,3 +46,25 @@ def test_mask_card():
     assert mask_card('Visa Gold 7305799447374042') == 'Visa Gold 7305 79** **** 4042'
     assert mask_card('Maestro 4598300720424501') == 'Maestro 4598 30** **** 4501'
     assert mask_card('Счет 97584898735659638967') == 'Счет **8967'
+
+
+@pytest.fixture
+def test_list():
+    test_object = []
+    o = Operation(test_json_list[0].get("id"),
+                  test_json_list[0].get("state"),
+                  test_json_list[0].get("date"),
+                  test_json_list[0].get("operationAmount"),
+                  test_json_list[0].get("description"),
+                  test_json_list[0].get("from"),
+                  test_json_list[0].get("to"))
+    test_object.append(o)
+    return test_object[0]
+
+
+def test_class_methods(test_list):
+    assert test_list.get_date() == "26.08.2019"
+    assert test_list.get_description() == "Перевод организации"
+    assert test_list.get_payer() == "Maestro 1596837868705199"
+    assert test_list.get_receiver() == "Счет 64686473678894779589"
+    assert test_list.get_amount() == "31957.58 руб."

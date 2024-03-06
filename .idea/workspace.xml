@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Включены тесты на методы" />
+    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Включены тесты на функции">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_code.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -226,15 +229,7 @@
       <option name="project" value="LOCAL" />
       <updated>1709648313274</updated>
     </task>
-    <task id="LOCAL-00008" summary="Включены тесты на методы">
-      <option name="closed" value="true" />
-      <created>1709692889897</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1709692889897</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,8 +260,7 @@
     <MESSAGE value="Сортировка платежей и вывод результов." />
     <MESSAGE value="Переписан вывод номера карты." />
     <MESSAGE value="Включены тесты на функции" />
-    <MESSAGE value="Включены тесты на методы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Включены тесты на методы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Включены тесты на функции" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
