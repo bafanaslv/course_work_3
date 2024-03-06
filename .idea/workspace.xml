@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Включены тесты на функции">
+    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Включены тесты на методы класса Operations.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_methods.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,23 +42,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.pytest for test_code.test_create_operation_objects.executor": "Run",
-    "Python tests.pytest for test_code.test_get_date.executor": "Run",
-    "Python tests.pytest for test_code.test_load_json_file.executor": "Run",
-    "Python tests.pytest for test_code.test_mask_card.executor": "Run",
-    "Python tests.pytest for test_load_json_file.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.main1.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
-    "last_opened_file_path": "C:/Users/Slava.ZDSHIP/PycharmProjects/Sky-python",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.pytest for test_code.test_class_methods.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_create_operation_objects.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_get.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_get_date.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_load_json_file.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_mask_card.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_load_json_file.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_methods.test_get_date.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_methods.test_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in test_code.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Slava.ZDSHIP/PycharmProjects/Sky-python&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python tests.pytest for test_code.test_get_date">
+}</component>
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
@@ -79,6 +86,23 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_code.test_class_methods" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="course_work_3" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_code.test_class_methods&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest for test_code.test_create_operation_objects" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
@@ -96,7 +120,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_code.test_get_date" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_code.test_get" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,11 +133,11 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_code.test_get_date&quot;" />
+      <option name="_new_target" value="&quot;test_code.test_get&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_code.test_load_json_file" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest in test_code.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,34 +150,17 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_code.test_load_json_file&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_code.test_mask_card" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="course_work_3" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_code.test_mask_card&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_code.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_code.test_get_date" />
-        <item itemvalue="Python tests.pytest for test_code.test_create_operation_objects" />
-        <item itemvalue="Python tests.pytest for test_code.test_load_json_file" />
-        <item itemvalue="Python tests.pytest for test_code.test_mask_card" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.pytest in test_code.py" />
+        <item itemvalue="Python tests.pytest for test_code.test_class_methods" />
+        <item itemvalue="Python tests.pytest for test_code.test_create_operation_objects" />
+        <item itemvalue="Python tests.pytest for test_code.test_get" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709648313274</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Включены тесты на методы класса Operations.">
+      <option name="closed" value="true" />
+      <created>1709715966417</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709715966417</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -260,15 +275,16 @@
     <MESSAGE value="Сортировка платежей и вывод результов." />
     <MESSAGE value="Переписан вывод номера карты." />
     <MESSAGE value="Включены тесты на функции" />
-    <option name="LAST_COMMIT_MESSAGE" value="Включены тесты на функции" />
+    <MESSAGE value="Включены тесты на методы класса Operations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Включены тесты на методы класса Operations." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tests/test_code.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="2" />
+          <line>64</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
