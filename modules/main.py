@@ -64,14 +64,17 @@ def mask_card(card_account):
 
 def create_operation_objects(path):
     """Получаем список operations_list из json-файла.
-    Создаем список объектов operations_objects из экземпляров класса Operation."""
+    Создаем список объектов operations_objects из экземпляров класса Operation.
+    Берем только непустые словари с прведенным платежом """
+    o = None
     operations_list = load_json_file(path)
     operations_objects = []
     for op_object in operations_list:
         if len(op_object) > 0 and op_object["state"] == 'EXECUTED':
             o = Operation(op_object.get("id"), op_object.get("state"), op_object.get("date"),
-            op_object.get("operationAmount"), op_object.get("description"), op_object.get("from"), op_object.get("to"))
-            operations_objects.append(o)
+                          op_object.get("operationAmount"), op_object.get("description"),
+                          op_object.get("from"), op_object.get("to"))
+        operations_objects.append(o)
     return operations_objects
 
 

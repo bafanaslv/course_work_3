@@ -1,43 +1,9 @@
-import json
 import os
-import pytest
 from os.path import dirname
 from modules.main import load_json_file, create_operation_objects, mask_card, Operation
 
 OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', 'operations.json')
 operation_list = load_json_file(OPERATION_JSON_FILE)
-
-
-test_json_list = [
-  {
-    "id": 441945886,
-    "state": "EXECUTED",
-    "date": "2019-08-26T10:50:58.294041",
-    "operationAmount": {
-      "amount": "31957.58",
-      "currency": {
-        "name": "руб.",
-        "code": "RUB"
-      }
-    },
-    "description": "Перевод организации",
-    "from": "Maestro 1596837868705199",
-    "to": "Счет 64686473678894779589"
-  }
-]
-
-dict_json = json.load(test_json_list)
-
-
-@pytest.fixture
-def test_list():
-    return [Operation(json_list.get("id"),
-    json_list.get("state"),
-    json_list.get("date"),
-    json_list.get("operationAmount"),
-    json_list.get("description"),
-    json_list.get("from"),
-    json_list.get("to")) for json_list in dict_json]
 
 
 def test_load_json_file():
