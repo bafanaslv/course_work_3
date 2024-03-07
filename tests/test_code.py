@@ -1,11 +1,10 @@
 import pytest
 import os
 from os.path import dirname
-from modules.main import create_operation_objects, mask_card, Operation
+from modules.main import create_operation_objects, mask_card, Operation, main
 
-OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', 'operations.json')
-# operation_list = load_json_file(OPERATION_JSON_FILE)
-
+FILE = 'test.json'
+TEST_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', FILE)
 
 test_json_list = [
   {
@@ -24,22 +23,6 @@ test_json_list = [
     "to": "Счет 64686473678894779589"
   }
 ]
-
-
-# def test_load_json_file():
-#     assert isinstance(operation_list, list)
-#     assert len(operation_list) > 0
-#     assert "id" in operation_list[0]
-#     assert "state" in operation_list[0]
-#     assert "date" in operation_list[0]
-#     assert "operationAmount" in operation_list[0]
-#     assert "description" in operation_list[0]
-#     assert "to" in operation_list[0]
-
-
-def test_create_operation_objects():
-    assert isinstance(create_operation_objects(OPERATION_JSON_FILE), list)
-    assert isinstance(create_operation_objects(OPERATION_JSON_FILE)[0], Operation)
 
 
 def test_mask_card():
@@ -68,3 +51,8 @@ def test_class_methods(test_list):
     assert test_list.get_payer() == "Maestro 1596837868705199"
     assert test_list.get_receiver() == "Счет 64686473678894779589"
     assert test_list.get_amount() == "31957.58 руб."
+
+
+def test_create_operation_objects():
+    assert create_operation_objects('bla_bla_vla.json') is None
+    assert create_operation_objects(test_json_list) == test_list[0]
