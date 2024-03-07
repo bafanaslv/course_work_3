@@ -1,11 +1,9 @@
-# Программа предназанчена для показа успешных операций клиента
-# по банковской карте.
+# Программа предназанчена для показа успешных операций клиентов
 
 import os.path
 import json
 import os
 import datetime
-from datetime import strptime
 from os.path import dirname
 
 OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', 'operations.json')
