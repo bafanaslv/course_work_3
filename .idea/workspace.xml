@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Включены тесты на методы класса Operations.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="добавлен тесты">
       <change beforePath="$PROJECT_DIR$/modules/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_code.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,27 +39,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.pytest for test_code.test_class_methods.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_create_operation_objects.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_get.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_get_date.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_load_json_file.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_mask_card.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_load_json_file.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_methods.test_get_date.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_methods.test_list.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest in test_code.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main1.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Slava.ZDSHIP/PycharmProjects/Sky-python&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.pytest for test_code.test_class_methods.executor": "Run",
+    "Python tests.pytest for test_code.test_create_operation_objects.executor": "Run",
+    "Python tests.pytest for test_code.test_get.executor": "Run",
+    "Python tests.pytest for test_code.test_get_date.executor": "Run",
+    "Python tests.pytest for test_code.test_load_json_file.executor": "Run",
+    "Python tests.pytest for test_code.test_mask_card.executor": "Run",
+    "Python tests.pytest for test_load_json_file.executor": "Run",
+    "Python tests.pytest for test_methods.test_get_date.executor": "Run",
+    "Python tests.pytest for test_methods.test_list.executor": "Run",
+    "Python tests.pytest in test_code.py.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.main1.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging develop",
+    "last_opened_file_path": "C:/Users/Slava.ZDSHIP/PycharmProjects/Sky-python",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Python tests.pytest for test_code.test_create_operation_objects">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
@@ -291,7 +289,8 @@
     <MESSAGE value="Переписан вывод номера карты." />
     <MESSAGE value="Включены тесты на функции" />
     <MESSAGE value="Включены тесты на методы класса Operations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Включены тесты на методы класса Operations." />
+    <MESSAGE value="добавлен тесты" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавлен тесты" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
