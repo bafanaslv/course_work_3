@@ -1,14 +1,14 @@
 # Программа предназанчена для показа успешных операций клиента
 
-# import os.path
 import json
 import os
 from os.path import dirname
 
-# FILE = 'test.json'
-FILE = 'operations.json'
-OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', FILE)
-
+#FILE = 'test.json'
+FILE = 'empty_file.json'
+OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), FILE)
+#FILE = 'operations.json'
+#OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', FILE)
 
 class Operation:
     """id_ - идентификатор, state - состояние, date - дата операции, amount - сумма операции,
@@ -79,18 +79,15 @@ def json_file_check(operations_list):
 def load_json_file(path):
     """Проверяем файл вопросов-ответов на корректность и загружаем его."""
     if not os.path.exists(path):
-        print(f'Файл {FILE} не содержит записей или указан неверный путь к нему !\n')
+        print(f'Файл {FILE} отсуствует или указан неверный путь к нему !\n')
         return None
-    elif os.stat(path).st_size == 0:
-        print(f'Файл {FILE} не содержит записей или указан неверный путь к нему !\n')
-        return None
-    with open(path, 'r', encoding='utf-8') as file:
-        json_file = json.load(file)
-        if json_file_check(json_file) is True:
-            return json_file
-        else:
-            print(f'Неверная структура файла {FILE} !')
-            return None
+    else:
+        with open(path, 'r', encoding='utf-8') as file:
+            try:
+                return json.load(file)
+            except json.decoder.JSONDecodeError:
+                print(f'Неверная структура файла {FILE} !')
+                return None
 
 
 def create_operation_objects(path):
