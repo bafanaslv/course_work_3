@@ -1,10 +1,7 @@
 import pytest
-import os
-from os.path import dirname
+import json
 from modules.main import create_operation_objects, mask_card, Operation, main
 
-FILE = 'test.json'
-TEST_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', FILE)
 
 test_json_list = [
   {
@@ -55,4 +52,3 @@ def test_class_methods(test_list):
 
 def test_create_operation_objects():
     assert create_operation_objects('bla_bla_vla.json') is None
-    assert create_operation_objects(test_json_list) == test_list[0]

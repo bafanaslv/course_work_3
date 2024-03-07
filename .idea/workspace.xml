@@ -41,27 +41,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.pytest for test_code.test_class_methods.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_create_operation_objects.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_get.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_get_date.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_load_json_file.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_mask_card.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_load_json_file.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_methods.test_get_date.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_methods.test_list.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest in test_code.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main1.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Slava.ZDSHIP/PycharmProjects/Sky-python&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.pytest for test_code.test_class_methods.executor": "Run",
+    "Python tests.pytest for test_code.test_create_operation_objects.executor": "Run",
+    "Python tests.pytest for test_code.test_get.executor": "Run",
+    "Python tests.pytest for test_code.test_get_date.executor": "Run",
+    "Python tests.pytest for test_code.test_list.executor": "Run",
+    "Python tests.pytest for test_code.test_load_json_file.executor": "Run",
+    "Python tests.pytest for test_code.test_mask_card.executor": "Run",
+    "Python tests.pytest for test_load_json_file.executor": "Run",
+    "Python tests.pytest for test_methods.test_get_date.executor": "Run",
+    "Python tests.pytest for test_methods.test_list.executor": "Run",
+    "Python tests.pytest in test_code.py.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.main1.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
+    "last_opened_file_path": "C:/Users/Slava.ZDSHIP/PycharmProjects/Sky-python",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Python tests.pytest in test_code.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
@@ -119,7 +120,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_code.test_get" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_code.test_list" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -132,7 +133,7 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_code.test_get&quot;" />
+      <option name="_new_target" value="&quot;test_code.test_list&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -156,10 +157,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.pytest in test_code.py" />
-        <item itemvalue="Python tests.pytest for test_code.test_create_operation_objects" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.pytest for test_code.test_create_operation_objects" />
         <item itemvalue="Python tests.pytest for test_code.test_class_methods" />
-        <item itemvalue="Python tests.pytest for test_code.test_get" />
+        <item itemvalue="Python tests.pytest for test_code.test_list" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +299,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tests/test_code.py</url>
-          <line>47</line>
+          <line>44</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
