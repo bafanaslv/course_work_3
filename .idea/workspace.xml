@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Исправлен тесты на методы класса Operations.">
+    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Добавление тестов.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_code.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +68,7 @@
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.pytest for test_code.test_check_quantity">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
@@ -124,7 +125,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_code.test_print_operations" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_code.test_load_json_file" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,7 +138,7 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_code.test_print_operations&quot;" />
+      <option name="_new_target" value="&quot;test_code.test_load_json_file&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -160,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_code.test_check_quantity" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python tests.pytest for test_code.test_json_file_check" />
+        <item itemvalue="Python tests.pytest for test_code.test_load_json_file" />
         <item itemvalue="Python tests.pytest in test_code.py" />
-        <item itemvalue="Python tests.pytest for test_code.test_print_operations" />
+        <item itemvalue="Python tests.pytest for test_code.test_check_quantity" />
+        <item itemvalue="Python tests.pytest for test_code.test_json_file_check" />
       </list>
     </recent_temporary>
   </component>
@@ -272,7 +273,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709799590742</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Добавление тестов.">
+      <option name="closed" value="true" />
+      <created>1709819370843</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709819370843</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Добавление тестов.">
+      <option name="closed" value="true" />
+      <created>1709823683499</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709823683499</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -305,15 +322,21 @@
     <MESSAGE value="Включены тесты на функции" />
     <MESSAGE value="Включены тесты на методы класса Operations." />
     <MESSAGE value="Исправлен тесты на методы класса Operations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлен тесты на методы класса Operations." />
+    <MESSAGE value="Добавление тестов." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление тестов." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tests/test_code.py</url>
-          <line>66</line>
+          <line>67</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_code.py</url>
+          <line>88</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

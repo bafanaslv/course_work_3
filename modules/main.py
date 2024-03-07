@@ -4,8 +4,8 @@ import json
 import os
 from os.path import dirname
 
-#FILE = 'test.json'
-FILE = 'empty_file.json'
+FILE = 'test.json'
+#FILE = 'empty_file.json'
 OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), FILE)
 #FILE = 'operations.json'
 #OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', FILE)
@@ -84,6 +84,7 @@ def load_json_file(path):
     else:
         with open(path, 'r', encoding='utf-8') as file:
             try:
+                print(json.load(file))
                 return json.load(file)
             except json.decoder.JSONDecodeError:
                 print(f'Неверная структура файла {FILE} !')
@@ -102,6 +103,7 @@ def create_operation_objects(path):
                               op_object.get("operationAmount"), op_object.get("description"),
                               op_object.get("from"), op_object.get("to"))
                 operations_objects.append(o)
+        print(type(operations_objects))
         return operations_objects
     else:
         return None
