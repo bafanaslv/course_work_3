@@ -1,12 +1,12 @@
 import pytest
 import os
-import json
 from os.path import dirname
 from modules.main import main, create_operation_objects, mask, Operation, print_operations
 from modules.main import json_file_check, check_quantity, load_json_file
 
 EMPTY_JSON_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'empty_file.json')
 TEST_JSON_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'test.json')
+LIST_JSON_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'operations.json')
 
 test_json_list = [
   {
@@ -90,9 +90,10 @@ def test_check_quantity():
 
 def test_load_json_file():
     assert load_json_file('bla_bla_vla.json') is None
-    assert load_json_file(EMPTY_JSON_FILE) is None
 
-def test_print_operations(test_list):
-    print(test_object[0])
+def test_print_operations():
     assert print_operations(check_empty_list) is None
-    assert print_operations(test_object[0]) is True
+
+def test_main():
+    assert main(EMPTY_JSON_FILE) is None
+    assert main(LIST_JSON_FILE) is True

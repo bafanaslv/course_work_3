@@ -67,7 +67,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python tests.pytest for test_code.test_print_operations">
+  <component name="RunManager" selected="Python tests.pytest for test_code.test_main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
@@ -107,7 +107,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_code.test_json_file_check" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_code.test_main" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -120,7 +120,7 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_code.test_json_file_check&quot;" />
+      <option name="_new_target" value="&quot;test_code.test_main&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -160,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_code.test_print_operations" />
-        <item itemvalue="Python tests.pytest in test_code.py" />
+        <item itemvalue="Python tests.pytest for test_code.test_main" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.pytest in test_code.py" />
+        <item itemvalue="Python tests.pytest for test_code.test_print_operations" />
         <item itemvalue="Python tests.pytest for test_code.test_check_quantity" />
-        <item itemvalue="Python tests.pytest for test_code.test_json_file_check" />
       </list>
     </recent_temporary>
   </component>
@@ -304,7 +304,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709889581595</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Настройка тестов.">
+      <option name="closed" value="true" />
+      <created>1709922215265</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1709922215265</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
