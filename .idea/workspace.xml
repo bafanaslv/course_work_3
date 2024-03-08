@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Настройка тестов.">
-      <change afterPath="$PROJECT_DIR$/test_list.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_code.py" afterDir="false" />
     </list>
@@ -68,7 +66,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python tests.pytest for test_code.test_check_quantity">
+  <component name="RunManager" selected="Python tests.pytest for test_code.test_print_operations">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
@@ -142,7 +140,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_code.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_code.test_print_operations" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -155,17 +153,17 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_code.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;test_code.test_print_operations&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_code.test_print_operations" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python tests.pytest for test_code.test_check_quantity" />
         <item itemvalue="Python tests.pytest for test_code.test_json_file_check" />
         <item itemvalue="Python tests.pytest for test_code.test_load_json_file" />
-        <item itemvalue="Python tests.pytest in test_code.py" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -289,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709823683499</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Настройка тестов.">
+      <option name="closed" value="true" />
+      <created>1709888989020</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1709888989020</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -323,7 +329,8 @@
     <MESSAGE value="Включены тесты на методы класса Operations." />
     <MESSAGE value="Исправлен тесты на методы класса Operations." />
     <MESSAGE value="Добавление тестов." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление тестов." />
+    <MESSAGE value="Настройка тестов." />
+    <option name="LAST_COMMIT_MESSAGE" value="Настройка тестов." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
