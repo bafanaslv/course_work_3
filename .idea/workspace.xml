@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Настройка тестов.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_code.py" afterDir="false" />
-    </list>
+    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Окончание настройки тестов." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -312,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709922215265</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Окончание настройки тестов.">
+      <option name="closed" value="true" />
+      <created>1709927372831</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1709927372831</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -347,7 +351,8 @@
     <MESSAGE value="Исправлен тесты на методы класса Operations." />
     <MESSAGE value="Добавление тестов." />
     <MESSAGE value="Настройка тестов." />
-    <option name="LAST_COMMIT_MESSAGE" value="Настройка тестов." />
+    <MESSAGE value="Окончание настройки тестов." />
+    <option name="LAST_COMMIT_MESSAGE" value="Окончание настройки тестов." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -121,9 +121,6 @@ def print_operations(operations_objects):
     if quantity > 0:
         # i - счетчик операций
         i = 0
-        line_1 = ''
-        line_2 = ''
-        line_3 = ''
         while i <= quantity - 1:
             # метод get_date() класса Operation выводит дату в формате dd.mm.yyyy, get_description - описание операции
             # метод get_payer() выводит счет или карту плательщика, get_receiver() - получателя.

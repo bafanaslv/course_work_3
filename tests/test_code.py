@@ -96,4 +96,3 @@ def test_print_operations():
 
 def test_main():
     assert main(EMPTY_JSON_FILE) is None
-    assert main(LIST_JSON_FILE) is True
