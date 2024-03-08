@@ -47,15 +47,16 @@ test_json_list_err = [
 check_empty_list = []
 check_quantity_list = [1, 2, 3, 4, 5, 6]
 
+
 def test_mask():
     assert mask('Visa Gold 7305799447374042') == 'Visa Gold 7305 79** **** 4042'
     assert mask('Maestro 4598300720424501') == 'Maestro 4598 30** **** 4501'
     assert mask('Счет 97584898735659638967') == 'Счет **8967'
 
 
+test_object = []
 @pytest.fixture
 def test_list():
-    test_object = []
     o = Operation(test_json_list[0].get("id"),
                   test_json_list[0].get("state"),
                   test_json_list[0].get("date"),
@@ -91,5 +92,7 @@ def test_load_json_file():
     assert load_json_file('bla_bla_vla.json') is None
     assert load_json_file(EMPTY_JSON_FILE) is None
 
-def test_print_operations():
+def test_print_operations(test_list):
+    print(test_object[0])
     assert print_operations(check_empty_list) is None
+    assert print_operations(test_object[0]) is True

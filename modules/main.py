@@ -4,8 +4,8 @@ import json
 import os
 from os.path import dirname
 
-FILE = 'test.json'
-#FILE = 'test_list.json'
+#FILE = 'test.json'
+FILE = 'test_list.json'
 #FILE = 'empty_file.json'
 OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), FILE)
 #FILE = 'operations.json'
@@ -111,7 +111,7 @@ def create_operation_objects(path):
 def check_quantity(operations_objects):
     # quantity - количество операций которое нужно обработать
     if len(operations_objects) == 0:
-        print(f'Неверная структура файла {FILE} - отсуствует словарь !')
+        print(f'Неверная структура файла {FILE} - отсутствует словарь !')
         return len(operations_objects)
     elif len(operations_objects) < 5:
         print(f'Файл {FILE} не содержит необходимого количества операций (< 5) !\n')
@@ -137,6 +137,7 @@ def print_operations(operations_objects):
             line_3 = operations_objects[i].get_amount()
             print(f'{line_1}\n{line_2}\n{line_3}\n')
             i += 1
+        return True
     else:
         return None
 
