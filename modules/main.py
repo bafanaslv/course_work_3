@@ -4,7 +4,8 @@ import json
 import os
 from os.path import dirname
 
-FILE = 'test.json'
+#FILE = 'test.json'
+FILE = 'test_list.json'
 #FILE = 'empty_file.json'
 OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), FILE)
 #FILE = 'operations.json'
@@ -84,7 +85,6 @@ def load_json_file(path):
     else:
         with open(path, 'r', encoding='utf-8') as file:
             try:
-                print(json.load(file))
                 return json.load(file)
             except json.decoder.JSONDecodeError:
                 print(f'Неверная структура файла {FILE} !')
@@ -103,7 +103,6 @@ def create_operation_objects(path):
                               op_object.get("operationAmount"), op_object.get("description"),
                               op_object.get("from"), op_object.get("to"))
                 operations_objects.append(o)
-        print(type(operations_objects))
         return operations_objects
     else:
         return None
@@ -111,7 +110,10 @@ def create_operation_objects(path):
 
 def check_quantity(operations_objects):
     # quantity - количество операций которое нужно обработать
-    if len(operations_objects) < 5:
+    if len(operations_objects) == 0:
+        print(f'Неверная структура файла {FILE} - отсуствует словарь !')
+        return len(operations_objects)
+    elif len(operations_objects) < 5:
         print(f'Файл {FILE} не содержит необходимого количества операций (< 5) !\n')
         return len(operations_objects)
     else:
@@ -143,6 +145,8 @@ def main():
     if operations_objects is not None:
         operations_objects.sort(key=lambda x: x.date, reverse=True)
         print_operations(operations_objects)
+    else:
+        return None
 
 
 if __name__ == '__main__':
