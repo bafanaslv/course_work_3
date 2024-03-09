@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Добавление тестов." />
+    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Окончание настройки тестов.">
+      <change beforePath="$PROJECT_DIR$/modules/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_code.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,32 +40,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.pytest for test_code.test_check_quantity.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_class_methods.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_create_operation_objects.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_get.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_get_date.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_json_file_check.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_list.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_load_json_file.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_main.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_mask_card.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_code.test_print_operations.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_load_json_file.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_methods.test_get_date.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_methods.test_list.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest in test_code.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main1.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Slava.ZDSHIP/PycharmProjects/Sky-python&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.pytest for test_code.test_check_quantity.executor": "Run",
+    "Python tests.pytest for test_code.test_class_methods.executor": "Run",
+    "Python tests.pytest for test_code.test_create_operation_objects.executor": "Run",
+    "Python tests.pytest for test_code.test_get.executor": "Run",
+    "Python tests.pytest for test_code.test_get_date.executor": "Run",
+    "Python tests.pytest for test_code.test_json_file_check.executor": "Run",
+    "Python tests.pytest for test_code.test_list.executor": "Run",
+    "Python tests.pytest for test_code.test_load_json_file.executor": "Run",
+    "Python tests.pytest for test_code.test_main.executor": "Run",
+    "Python tests.pytest for test_code.test_mask_card.executor": "Run",
+    "Python tests.pytest for test_code.test_print_operations.executor": "Run",
+    "Python tests.pytest for test_code.test_str_operation.executor": "Run",
+    "Python tests.pytest for test_load_json_file.executor": "Run",
+    "Python tests.pytest for test_methods.test_get_date.executor": "Run",
+    "Python tests.pytest for test_methods.test_list.executor": "Run",
+    "Python tests.pytest in test_code.py.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.main1.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
+    "last_opened_file_path": "C:/Users/Slava/PycharmProjects/Skypro",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
@@ -86,7 +90,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_code.test_check_quantity" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_code.test_main" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,11 +103,11 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_code.test_check_quantity&quot;" />
+      <option name="_new_target" value="&quot;test_code.test_main&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_code.test_json_file_check" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_code.test_print_operations" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,11 +120,11 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_code.test_json_file_check&quot;" />
+      <option name="_new_target" value="&quot;test_code.test_print_operations&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_code.test_load_json_file" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_code.test_str_operation" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -133,7 +137,7 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_code.test_load_json_file&quot;" />
+      <option name="_new_target" value="&quot;test_code.test_str_operation&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -157,10 +161,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python tests.pytest for test_code.test_load_json_file" />
+        <item itemvalue="Python tests.pytest for test_code.test_str_operation" />
         <item itemvalue="Python tests.pytest in test_code.py" />
-        <item itemvalue="Python tests.pytest for test_code.test_check_quantity" />
-        <item itemvalue="Python tests.pytest for test_code.test_json_file_check" />
+        <item itemvalue="Python tests.pytest for test_code.test_main" />
+        <item itemvalue="Python tests.pytest for test_code.test_print_operations" />
       </list>
     </recent_temporary>
   </component>
@@ -284,15 +288,55 @@
       <option name="project" value="LOCAL" />
       <updated>1709823683499</updated>
     </task>
-    <task id="LOCAL-00014" summary="Добавление тестов.">
+    <task id="LOCAL-00014" summary="Настройка тестов.">
       <option name="closed" value="true" />
-      <created>1709825436534</created>
+      <created>1709888989020</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1709825436534</updated>
+      <updated>1709888989020</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Настройка тестов.">
+      <option name="closed" value="true" />
+      <created>1709889581595</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1709889581595</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Настройка тестов.">
+      <option name="closed" value="true" />
+      <created>1709922215265</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1709922215265</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Окончание настройки тестов.">
+      <option name="closed" value="true" />
+      <created>1709927372831</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1709927372831</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Окончание настройки тестов.">
+      <option name="closed" value="true" />
+      <created>1709927927220</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1709927927220</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Окончание настройки тестов.">
+      <option name="closed" value="true" />
+      <created>1709956583636</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1709956583636</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -326,20 +370,22 @@
     <MESSAGE value="Включены тесты на методы класса Operations." />
     <MESSAGE value="Исправлен тесты на методы класса Operations." />
     <MESSAGE value="Добавление тестов." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление тестов." />
+    <MESSAGE value="Настройка тестов." />
+    <MESSAGE value="Окончание настройки тестов." />
+    <option name="LAST_COMMIT_MESSAGE" value="Окончание настройки тестов." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_code.py</url>
-          <line>67</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/modules/main.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tests/test_code.py</url>
-          <line>88</line>
-          <option name="timeStamp" value="6" />
+          <line>92</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

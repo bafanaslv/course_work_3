@@ -4,11 +4,13 @@ import json
 import os
 from os.path import dirname
 
-FILE = 'test.json'
+#FILE = 'test.json'
+FILE = 'test_list.json'
 #FILE = 'empty_file.json'
-OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), FILE)
+OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), FILE)
 #FILE = 'operations.json'
-#OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', FILE)
+#OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', FILE)
+
 
 class Operation:
     """id_ - идентификатор, state - состояние, date - дата операции, amount - сумма операции,
@@ -56,7 +58,6 @@ def mask(card_account):
         # фрагменты с цифрами и получаем маскированный номер карты card_number.
         # Далее склеиваем список с частями имени карты с маскированным номером карты.
         # len_card - количество элементов в списке card.
-
         card = card_account.split(" ")
         len_card = len(card)
         card_number = card[-1][0:4] + " " + card[-1][4:6]+'** ****' + " " + card[-1][-4:]
@@ -64,12 +65,9 @@ def mask(card_account):
 
 
 def json_file_check(operations_list):
-    if ("id" not in operations_list[0] or
-        "state" not in operations_list[0] or
-        "date" not in operations_list[0] or
-        "operationAmount" not in operations_list[0] or
-        "description" not in operations_list[0] or
-        "from" not in operations_list[0] or
+    if ("id" not in operations_list[0] or "state" not in operations_list[0] or
+        "date" not in operations_list[0] or "operationAmount" not in operations_list[0] or
+        "description" not in operations_list[0] or"from" not in operations_list[0] or
         "to" not in operations_list[0]):
         return False
     else:
@@ -84,7 +82,6 @@ def load_json_file(path):
     else:
         with open(path, 'r', encoding='utf-8') as file:
             try:
-                print(json.load(file))
                 return json.load(file)
             except json.decoder.JSONDecodeError:
                 print(f'Неверная структура файла {FILE} !')
@@ -103,47 +100,39 @@ def create_operation_objects(path):
                               op_object.get("operationAmount"), op_object.get("description"),
                               op_object.get("from"), op_object.get("to"))
                 operations_objects.append(o)
-        print(type(operations_objects))
         return operations_objects
     else:
         return None
 
 
-def check_quantity(operations_objects):
-    # quantity - количество операций которое нужно обработать
-    if len(operations_objects) < 5:
-        print(f'Файл {FILE} не содержит необходимого количества операций (< 5) !\n')
-        return len(operations_objects)
+def str_operation(operation):
+    line_1 = operation.get_date() + ' ' + operation.get_description()
+    if operation.get_payer() is None:
+        line_2 = mask(operation.get_receiver())
     else:
-        return 5
+        line_2 = mask(operation.get_payer()) + ' -> ' + mask(operation.get_receiver())
+    line_3 = operation.get_amount()
+    return (line_1+line_2+line_3)
+
 
 def print_operations(operations_objects):
-    quantity = check_quantity(operations_objects)
-    # i - счетчик операций
-    i = 0
-    while i <= quantity - 1:
-        # метод get_date() класса Operation выводит дату в формате dd.mm.yyyy, get_description - описание операции
-        # метод get_payer() выводит счет или карту плательщика, get_receiver() - получателя.
-        # функция mask() перед выводом накладывает маску (*) на часть номера карты или счета.
-        # метод get_amount() выводит сумму банковской операции.
-        line_1 = operations_objects[i].get_date() + ' ' + operations_objects[i].get_description()
-        if operations_objects[i].get_payer() is None:
-            line_2 = mask(operations_objects[i].get_receiver())
-        else:
-            line_2 = mask(operations_objects[i].get_payer()) + ' -> ' + mask(operations_objects[i].get_receiver())
-        line_3 = operations_objects[i].get_amount()
-        print(f'{line_1}\n{line_2}\n{line_3}\n')
-        i += 1
+    if len(operations_objects) > 0:
+        for operation in operations_objects:
+            print(str_operation(operation))
+    else:
+        print(f'Неверная структура файла {FILE} - отсутствуют банковские операции !')
+        return None
 
-
-def main():
+def main(path):
     """create_operation_objects создает список объектов операций, сортирует список по дата (x.date)
     и выводит результаты операций в требуемомо виде."""
-    operations_objects = create_operation_objects(OPERATION_JSON_FILE)
+    operations_objects = create_operation_objects(path)
     if operations_objects is not None:
         operations_objects.sort(key=lambda x: x.date, reverse=True)
         print_operations(operations_objects)
-
+        return True
+    else:
+        return None
 
 if __name__ == '__main__':
-    main()
+    main(OPERATIONS_JSON_FILE)

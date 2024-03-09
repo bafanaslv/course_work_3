@@ -1,11 +1,10 @@
 import pytest
 import os
-import json
 from os.path import dirname
-from modules.main import create_operation_objects, mask, Operation, json_file_check, check_quantity, load_json_file
+from modules.main import main, create_operation_objects, mask, Operation, str_operation
+from modules.main import json_file_check, load_json_file, print_operations
 
 EMPTY_JSON_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'empty_file.json')
-TEST_JSON_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'test.json')
 
 test_json_list = [
   {
@@ -43,7 +42,9 @@ test_json_list_err = [
   }
 ]
 
+check_empty_list = []
 check_quantity_list = [1, 2, 3, 4, 5, 6]
+
 
 def test_mask():
     assert mask('Visa Gold 7305799447374042') == 'Visa Gold 7305 79** **** 4042'
@@ -51,9 +52,9 @@ def test_mask():
     assert mask('Счет 97584898735659638967') == 'Счет **8967'
 
 
+test_object = []
 @pytest.fixture
 def test_list():
-    test_object = []
     o = Operation(test_json_list[0].get("id"),
                   test_json_list[0].get("state"),
                   test_json_list[0].get("date"),
@@ -75,17 +76,19 @@ def test_class_methods(test_list):
 
 def test_create_operation_objects():
     assert create_operation_objects('bla_bla_vla.json') is None
-    assert create_operation_objects('bla_bla_vla.json') is None
-
 
 def test_json_file_check():
     assert json_file_check(test_json_list) is True
     assert json_file_check(test_json_list_err) is False
 
-def test_check_quantity():
-    assert check_quantity(test_json_list) == 1
-    assert check_quantity(check_quantity_list) == 5
-
 def test_load_json_file():
     assert load_json_file('bla_bla_vla.json') is None
-    assert load_json_file(TEST_JSON_FILE) == []
+
+def test_str_operation(test_list):
+    assert str_operation(test_object[0]) == "26.08.2019 Перевод организацииMaestro 1596 83** **** 5199 -> Счет **958931957.58 руб."
+
+def test_print_operations():
+    assert print_operations(check_empty_list) is None
+
+def test_main():
+    assert main(EMPTY_JSON_FILE) is None
