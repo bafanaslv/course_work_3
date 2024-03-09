@@ -1,7 +1,7 @@
 import pytest
 import os
 from os.path import dirname
-from modules.main import main, create_operation_objects, mask, Operation
+from modules.main import main, create_operation_objects, mask, Operation, str_operation
 from modules.main import json_file_check, load_json_file, print_operations
 
 EMPTY_JSON_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'empty_file.json')
@@ -83,6 +83,9 @@ def test_json_file_check():
 
 def test_load_json_file():
     assert load_json_file('bla_bla_vla.json') is None
+
+def test_str_operation(test_list):
+    assert str_operation(test_object[0]) == "26.08.2019 Перевод организацииMaestro 1596 83** **** 5199 -> Счет **958931957.58 руб."
 
 def test_print_operations():
     assert print_operations(check_empty_list) is None

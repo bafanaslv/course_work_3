@@ -4,8 +4,8 @@ import json
 import os
 from os.path import dirname
 
-FILE = 'test.json'
-#FILE = 'test_list.json'
+#FILE = 'test.json'
+FILE = 'test_list.json'
 #FILE = 'empty_file.json'
 OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), FILE)
 #FILE = 'operations.json'
@@ -105,23 +105,20 @@ def create_operation_objects(path):
         return None
 
 
+def str_operation(operation):
+    line_1 = operation.get_date() + ' ' + operation.get_description()
+    if operation.get_payer() is None:
+        line_2 = mask(operation.get_receiver())
+    else:
+        line_2 = mask(operation.get_payer()) + ' -> ' + mask(operation.get_receiver())
+    line_3 = operation.get_amount()
+    return (f'{line_1}{line_2}{line_3}')
+
+
 def print_operations(operations_objects):
     if len(operations_objects) > 0:
-        # i - счетчик операций
-        i = 0
-        while i <= len(operations_objects) - 1:
-            # метод get_date() класса Operation выводит дату в формате dd.mm.yyyy, get_description - описание операции
-            # метод get_payer() выводит счет или карту плательщика, get_receiver() - получателя.
-            # функция mask() перед выводом накладывает маску (*) на часть номера карты или счета.
-            # метод get_amount() выводит сумму банковской операции.
-            line_1 = operations_objects[i].get_date() + ' ' + operations_objects[i].get_description()
-            if operations_objects[i].get_payer() is None:
-                line_2 = mask(operations_objects[i].get_receiver())
-            else:
-                line_2 = mask(operations_objects[i].get_payer()) + ' -> ' + mask(operations_objects[i].get_receiver())
-            line_3 = operations_objects[i].get_amount()
-            print(f'{line_1}\n{line_2}\n{line_3}\n')
-            i += 1
+        for operation in operations_objects:
+            print(str_operation(operation))
     else:
         print(f'Неверная структура файла {FILE} - отсутствуют банковские операции !')
         return None
