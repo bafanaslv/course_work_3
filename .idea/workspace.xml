@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Окончание настройки тестов.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_code.py" afterDir="false" />
     </list>
@@ -54,6 +53,7 @@
     "Python tests.pytest for test_code.test_main.executor": "Run",
     "Python tests.pytest for test_code.test_mask_card.executor": "Run",
     "Python tests.pytest for test_code.test_print_operations.executor": "Run",
+    "Python tests.pytest for test_code.test_str_operation.executor": "Run",
     "Python tests.pytest for test_load_json_file.executor": "Run",
     "Python tests.pytest for test_methods.test_get_date.executor": "Run",
     "Python tests.pytest for test_methods.test_list.executor": "Run",
@@ -90,23 +90,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_code.test_check_quantity" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="course_work_3" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_code.test_check_quantity&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="pytest for test_code.test_main" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
@@ -141,6 +124,23 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_code.test_str_operation" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="course_work_3" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_code.test_str_operation&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in test_code.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="course_work_3" />
       <option name="ENV_FILES" value="" />
@@ -161,10 +161,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.pytest for test_code.test_str_operation" />
         <item itemvalue="Python tests.pytest in test_code.py" />
         <item itemvalue="Python tests.pytest for test_code.test_main" />
         <item itemvalue="Python tests.pytest for test_code.test_print_operations" />
-        <item itemvalue="Python tests.pytest for test_code.test_check_quantity" />
       </list>
     </recent_temporary>
   </component>
@@ -328,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709927927220</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Окончание настройки тестов.">
+      <option name="closed" value="true" />
+      <created>1709956583636</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1709956583636</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -376,7 +384,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tests/test_code.py</url>
-          <line>89</line>
+          <line>92</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

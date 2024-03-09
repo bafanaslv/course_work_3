@@ -112,7 +112,7 @@ def str_operation(operation):
     else:
         line_2 = mask(operation.get_payer()) + ' -> ' + mask(operation.get_receiver())
     line_3 = operation.get_amount()
-    return (f'{line_1}{line_2}{line_3}')
+    return (line_1+line_2+line_3)
 
 
 def print_operations(operations_objects):
