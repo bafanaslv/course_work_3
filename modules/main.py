@@ -112,13 +112,16 @@ def str_operation(operation):
     else:
         line_2 = mask(operation.get_payer()) + ' -> ' + mask(operation.get_receiver())
     line_3 = operation.get_amount()
-    return (line_1+line_2+line_3)
+    return (line_1+'/'+line_2+'/'+line_3)
 
 
 def print_operations(operations_objects):
     if len(operations_objects) > 0:
         for operation in operations_objects:
-            print(str_operation(operation))
+            str_op = str_operation(operation).split("/")
+            print(str_op[0])
+            print(str_op[1])
+            print(str_op[2])
     else:
         print(f'Неверная структура файла {FILE} - отсутствуют банковские операции !')
         return None

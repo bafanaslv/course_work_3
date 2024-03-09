@@ -5,6 +5,7 @@ from modules.main import main, create_operation_objects, mask, Operation, str_op
 from modules.main import json_file_check, load_json_file, print_operations
 
 EMPTY_JSON_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'empty_file.json')
+NON_EXISTENT_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'bla_bla_bla.json')
 
 test_json_list = [
   {
@@ -75,17 +76,17 @@ def test_class_methods(test_list):
 
 
 def test_create_operation_objects():
-    assert create_operation_objects('bla_bla_vla.json') is None
+    assert create_operation_objects(NON_EXISTENT_FILE) is None
 
 def test_json_file_check():
     assert json_file_check(test_json_list) is True
     assert json_file_check(test_json_list_err) is False
 
 def test_load_json_file():
-    assert load_json_file('bla_bla_vla.json') is None
+    assert load_json_file(NON_EXISTENT_FILE) is None
 
 def test_str_operation(test_list):
-    assert str_operation(test_object[0]) == "26.08.2019 Перевод организацииMaestro 1596 83** **** 5199 -> Счет **958931957.58 руб."
+    assert str_operation(test_object[0]) == "26.08.2019 Перевод организации/Maestro 1596 83** **** 5199 -> Счет **9589/31957.58 руб."
 
 def test_print_operations():
     assert print_operations(check_empty_list) is None
