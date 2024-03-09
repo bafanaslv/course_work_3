@@ -4,12 +4,12 @@ import json
 import os
 from os.path import dirname
 
-#FILE = 'test.json'
+FILE = 'test.json'
 #FILE = 'test_list.json'
 #FILE = 'empty_file.json'
-#OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), FILE)
-FILE = 'operations.json'
-OPERATION_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', FILE)
+OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), FILE)
+#FILE = 'operations.json'
+#OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', FILE)
 
 
 class Operation:
@@ -105,23 +105,11 @@ def create_operation_objects(path):
         return None
 
 
-def check_quantity(operations_objects):
-    # quantity - количество операций которое нужно обработать
-    if len(operations_objects) == 0:
-        print(f'Неверная структура файла {FILE} - отсутствует словарь !')
-        return len(operations_objects)
-    elif len(operations_objects) < 5:
-        print(f'Файл {FILE} не содержит необходимого количества операций (< 5) !\n')
-        return len(operations_objects)
-    else:
-        return 5
-
 def print_operations(operations_objects):
-    quantity = check_quantity(operations_objects)
-    if quantity > 0:
+    if len(operations_objects) > 0:
         # i - счетчик операций
         i = 0
-        while i <= quantity - 1:
+        while i <= len(operations_objects) - 1:
             # метод get_date() класса Operation выводит дату в формате dd.mm.yyyy, get_description - описание операции
             # метод get_payer() выводит счет или карту плательщика, get_receiver() - получателя.
             # функция mask() перед выводом накладывает маску (*) на часть номера карты или счета.
@@ -135,6 +123,7 @@ def print_operations(operations_objects):
             print(f'{line_1}\n{line_2}\n{line_3}\n')
             i += 1
     else:
+        print(f'Неверная структура файла {FILE} - отсутствуют банковские операции !')
         return None
 
 def main(path):
@@ -149,4 +138,4 @@ def main(path):
         return None
 
 if __name__ == '__main__':
-    main(OPERATION_JSON_FILE)
+    main(OPERATIONS_JSON_FILE)
