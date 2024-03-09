@@ -5,11 +5,11 @@ import os
 from os.path import dirname
 
 #FILE = 'test.json'
-FILE = 'test_list.json'
+#FILE = 'test_list.json'
 #FILE = 'empty_file.json'
-OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), FILE)
-#FILE = 'operations.json'
-#OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', FILE)
+#OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), FILE)
+FILE = 'operations.json'
+OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', FILE)
 
 
 class Operation:
@@ -90,7 +90,8 @@ def load_json_file(path):
 
 def create_operation_objects(path):
     """Получаем список operations_list из json-файла с помощью функции load_json_file.
-    Создаем список объектов operations_objects из экземпляров класса Operation."""
+    Создаем список объектов operations_objects из экземпляров класса Operation и возвращаем его.
+    Если файла не существует или он имеет неверную структуру возвращаем None/"""
     operations_list = load_json_file(path)
     if type(operations_list) is list:
         operations_objects = []
