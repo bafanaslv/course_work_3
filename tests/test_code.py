@@ -6,6 +6,7 @@ from modules.main import json_file_check, load_json_file, print_operations
 
 EMPTY_JSON_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'empty_file.json')
 TEST_JSON_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'test_list.json')
+ERR_JSON_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'test.json')
 NON_EXISTENT_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'bla_bla_bla.json')
 
 test_json_list1 = [
@@ -105,15 +106,21 @@ def test_class_methods(test_list1):
 
 
 def test_create_operation_objects():
-    assert create_operation_objects(NON_EXISTENT_FILE) is None
-    assert create_operation_objects(TEST_JSON_FILE)[0].get_date() == "26.08.2019"
+    assert create_operation_objects(test_json_list1)[0].get_date() == "26.08.2019"
+    assert create_operation_objects(test_json_list1)[0].get_description() == "Перевод организации"
+    assert create_operation_objects(test_json_list1)[0].get_payer() == "Maestro 1596837868705199"
+    assert create_operation_objects(test_json_list1)[0].get_receiver() == "Счет 64686473678894779589"
+    assert create_operation_objects(test_json_list1)[0].get_amount() == "31957.58 руб."
 
 def test_json_file_check():
     assert json_file_check(test_json_list1) is True
     assert json_file_check(test_json_list_err) is False
 
 def test_load_json_file():
+    assert load_json_file(TEST_JSON_FILE) is not None
+    assert load_json_file(EMPTY_JSON_FILE) is None
     assert load_json_file(NON_EXISTENT_FILE) is None
+    assert load_json_file(ERR_JSON_FILE) is None
 
 def test_str_operation(test_list1, test_list2):
     assert (str_operation(test_object1[0]) ==
@@ -125,4 +132,7 @@ def test_print_operations():
     assert print_operations(check_empty_list) is None
 
 def test_main():
+    assert main(TEST_JSON_FILE) is True
     assert main(EMPTY_JSON_FILE) is None
+    assert main(NON_EXISTENT_FILE) is None
+    assert main(ERR_JSON_FILE) is None

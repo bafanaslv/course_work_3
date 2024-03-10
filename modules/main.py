@@ -88,22 +88,18 @@ def load_json_file(path):
                 return None
 
 
-def create_operation_objects(path):
+def create_operation_objects(operations_list):
     """Получаем список operations_list из json-файла с помощью функции load_json_file.
     Создаем список объектов operations_objects из экземпляров класса Operation и возвращаем его.
     Если файла не существует или он имеет неверную структуру возвращаем None/"""
-    operations_list = load_json_file(path)
-    if type(operations_list) is list:
-        operations_objects = []
-        for op_object in operations_list:
-            if len(op_object) > 0 and op_object["state"] == 'EXECUTED':
-                o = Operation(op_object.get("id"), op_object.get("state"), op_object.get("date"),
-                              op_object.get("operationAmount"), op_object.get("description"),
-                              op_object.get("from"), op_object.get("to"))
-                operations_objects.append(o)
-        return operations_objects
-    else:
-        return None
+    operations_objects = []
+    for op_object in operations_list:
+        if len(op_object) > 0 and op_object["state"] == 'EXECUTED':
+            o = Operation(op_object.get("id"), op_object.get("state"), op_object.get("date"),
+                          op_object.get("operationAmount"), op_object.get("description"),
+                          op_object.get("from"), op_object.get("to"))
+            operations_objects.append(o)
+    return operations_objects
 
 
 def str_operation(operation):
@@ -130,8 +126,9 @@ def print_operations(operations_objects):
 def main(path):
     """create_operation_objects создает список объектов операций, сортирует список по дата (x.date)
     и выводит результаты операций в требуемомо виде."""
-    operations_objects = create_operation_objects(path)
-    if operations_objects is not None:
+    operations_list = load_json_file(path)
+    if operations_list is not None:
+        operations_objects = create_operation_objects(operations_list)
         operations_objects.sort(key=lambda x: x.date, reverse=True)
         print_operations(operations_objects)
         return True
