@@ -99,7 +99,7 @@ def create_operation_objects(operations_list):
 
 
 def str_operation(operation):
-    """Подготовка банковских операций к выводу. Готовится строка из трех частей разделенных символоам '/'"""
+    """Подготовка банковских операций к выводу. Готовится строка из трех частей разделенных символоам '/'. """
     line_1 = operation.get_date() + ' ' + operation.get_description()
     if operation.get_payer() is None:
         line_2 = mask(operation.get_receiver())
