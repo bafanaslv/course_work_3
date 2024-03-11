@@ -68,6 +68,7 @@ test_inv_json_list = [
 
 
 def test_mask():
+    """Проверка установки масок на счета в зависимости вида и содердимого счета."""
     assert mask('Visa Gold 7305799447374042') == 'Visa Gold 7305 79** **** 4042'
     assert mask('Maestro 4598300720424501') == 'Maestro 4598 30** **** 4501'
     assert mask('Счет 97584898735659638967') == 'Счет **8967'
@@ -100,6 +101,7 @@ def test_list2():
 
 
 def test_create_operation_objects():
+    """Проверка методов класса Operation."""
     assert create_operation_objects(test_json_list1)[0].get_date() == "26.08.2019"
     assert create_operation_objects(test_json_list1)[0].get_description() == "Перевод организации"
     assert create_operation_objects(test_json_list1)[0].get_payer() == "Maestro 1596837868705199"
@@ -108,6 +110,8 @@ def test_create_operation_objects():
 
 
 def test_load_json_file():
+    """Проверка json - файла. TEST_FILE - правильный файл, EMPTY_FILE - пустой файл, NON_EXISTENT_FILE -
+    имя несуществующего файла, INVALID_FILE - файл неверным содержимым."""
     assert load_json_file(TEST_FILE) is not None
     assert load_json_file(EMPTY_FILE) is None
     assert load_json_file(NON_EXISTENT_FILE) is None
@@ -115,6 +119,7 @@ def test_load_json_file():
 
 
 def test_json_file_check():
+    """Проверка структуры загруженного json - файла."""
     assert json_list_check(test_json_list1) is True
     assert json_list_check(test_inv_json_list) is False
 
