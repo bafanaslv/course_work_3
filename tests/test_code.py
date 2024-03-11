@@ -74,6 +74,7 @@ def test_mask():
     assert mask('Счет 97584898735659638967') == 'Счет **8967'
 
 
+# Фикустуры test_list1 и test_list2 тем, что фикстура test_list2 подготовлена для операции "Открытие счета".
 @pytest.fixture
 def test_list1():
     o = Operation(test_json_list1[0].get("id"),
@@ -125,6 +126,8 @@ def test_json_file_check():
 
 
 def test_str_operation(test_list1, test_list2):
+    """Проверка вывода в зависимости от вида и банковской операции.
+    Выводимые строки отделены друг от друга символом '/'."""
     assert (str_operation(test_object1[0]) ==
             "26.08.2019 Перевод организации/Maestro 1596 83** **** 5199 -> Счет **9589/31957.58 руб.")
     assert (str_operation(test_object2[0]) ==

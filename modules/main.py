@@ -1,15 +1,11 @@
-# Программа предназанчена для показа успешных банковский операций.
+# Программа предназанчена для показа пяти последних успешных банковских операций.
 
 import json
 import os
 from os.path import dirname
 
-# FILE = 'operations.json'
-# OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', FILE)
 FILE = 'empty_file.json'
 OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), FILE)
-# FILE = 'invalid_file.json'
-# OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), FILE)
 
 
 class Operation:
@@ -65,7 +61,7 @@ def mask(card_account):
 
 
 def load_json_file(path):
-    """Загрузка и проверка файла вопросов-ответов на корректность."""
+    """Загрузка json - файла банковских операций."""
     if not os.path.exists(path):
         print(f'Файл {FILE} отсуствует или указан неверный путь к нему !\n')
         return None
@@ -79,7 +75,7 @@ def load_json_file(path):
 
 
 def json_list_check(operations_list):
-    """Проверка структуры объекта бвноковской операции."""
+    """Проверка структуры объекта банковской операции."""
     if ("id" not in operations_list[0] or "state" not in operations_list[0] or
         "date" not in operations_list[0] or "operationAmount" not in operations_list[0] or
         "description" not in operations_list[0] or"from" not in operations_list[0] or
@@ -90,8 +86,8 @@ def json_list_check(operations_list):
 
 
 def create_operation_objects(operations_list):
-    """Получаем список operations_list из json-файла с помощью функции load_json_file.
-    Создается список объектов operations_objects из экземпляров класса Operation и возвращаем его."""
+    """Формирование списка operations_list из json-файла с помощью функции load_json_file.
+    Создаение список объектов operations_objects из экземпляров класса Operation."""
     operations_objects = []
     for op_object in operations_list:
         if len(op_object) > 0 and op_object["state"] == 'EXECUTED':
