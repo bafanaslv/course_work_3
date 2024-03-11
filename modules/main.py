@@ -1,13 +1,9 @@
-# Программа предназанчена для показа успешных операций клиента
+# Программа предназанчена для показа успешных банковский операций.
 
 import json
 import os
 from os.path import dirname
 
-#FILE = 'test.json'
-#FILE = 'test_list.json'
-#FILE = 'empty_file.json'
-#OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), FILE)
 FILE = 'operations.json'
 OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', FILE)
 
@@ -64,18 +60,8 @@ def mask(card_account):
         return " ".join(card[0:len_card - 1])+" " + card_number
 
 
-def json_file_check(operations_list):
-    if ("id" not in operations_list[0] or "state" not in operations_list[0] or
-        "date" not in operations_list[0] or "operationAmount" not in operations_list[0] or
-        "description" not in operations_list[0] or"from" not in operations_list[0] or
-        "to" not in operations_list[0]):
-        return False
-    else:
-        return True
-
-
 def load_json_file(path):
-    """Проверяем файл вопросов-ответов на корректность и загружаем его."""
+    """Загрузка и проверка файла вопросов-ответов на корректность."""
     if not os.path.exists(path):
         print(f'Файл {FILE} отсуствует или указан неверный путь к нему !\n')
         return None
@@ -88,10 +74,20 @@ def load_json_file(path):
                 return None
 
 
+def json_list_check(operations_list):
+    """Проверка структуры объекта бвноковской операции."""
+    if ("id" not in operations_list[0] or "state" not in operations_list[0] or
+        "date" not in operations_list[0] or "operationAmount" not in operations_list[0] or
+        "description" not in operations_list[0] or"from" not in operations_list[0] or
+        "to" not in operations_list[0]):
+        return False
+    else:
+        return True
+
+
 def create_operation_objects(operations_list):
     """Получаем список operations_list из json-файла с помощью функции load_json_file.
-    Создаем список объектов operations_objects из экземпляров класса Operation и возвращаем его.
-    Если файла не существует или он имеет неверную структуру возвращаем None/"""
+    Создается список объектов operations_objects из экземпляров класса Operation и возвращаем его."""
     operations_objects = []
     for op_object in operations_list:
         if len(op_object) > 0 and op_object["state"] == 'EXECUTED':
@@ -103,16 +99,18 @@ def create_operation_objects(operations_list):
 
 
 def str_operation(operation):
+    """Подготовка банковских операций к выводу. Готовится строка из трех частей разделенных символоам '/'"""
     line_1 = operation.get_date() + ' ' + operation.get_description()
     if operation.get_payer() is None:
         line_2 = mask(operation.get_receiver())
     else:
         line_2 = mask(operation.get_payer()) + ' -> ' + mask(operation.get_receiver())
     line_3 = operation.get_amount()
-    return (line_1+'/'+line_2+'/'+line_3)
+    return line_1+'/'+line_2+'/'+line_3
 
 
 def print_operations(operations_objects):
+    """Вывод банковских операций в три строки. Если поступил неверный объект выводится сообщение."""
     if len(operations_objects) > 0:
         for operation in operations_objects:
             str_op = str_operation(operation).split("/")
@@ -123,17 +121,23 @@ def print_operations(operations_objects):
         print(f'Неверная структура файла {FILE} - отсутствуют банковские операции !')
         return None
 
+
 def main(path):
-    """create_operation_objects создает список объектов операций, сортирует список по дата (x.date)
-    и выводит результаты операций в требуемомо виде."""
+    """Функция load_json_file загружает json - файл и выполняет первичную проверу файла. После проверки структуры
+    полученного списка функцией json_list_check функция create_operation_objects создает список операций. Далее
+    список сортируется по дате и функцией print_operations выводится результат операций в требуемом виде."""
     operations_list = load_json_file(path)
     if operations_list is not None:
-        operations_objects = create_operation_objects(operations_list)
-        operations_objects.sort(key=lambda x: x.date, reverse=True)
-        print_operations(operations_objects)
-        return True
+        if json_list_check(operations_list) is True:
+            operations_objects = create_operation_objects(operations_list)
+            operations_objects.sort(key=lambda x: x.date, reverse=True)
+            print_operations(operations_objects)
+            return True
+        else:
+            return False
     else:
         return None
+
 
 if __name__ == '__main__':
     main(OPERATIONS_JSON_FILE)

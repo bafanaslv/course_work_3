@@ -2,13 +2,20 @@ import pytest
 import os
 from os.path import dirname
 from modules.main import main, create_operation_objects, mask, Operation, str_operation
-from modules.main import json_file_check, load_json_file, print_operations
+from modules.main import load_json_file, json_list_check, print_operations
 
-EMPTY_JSON_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'empty_file.json')
-TEST_JSON_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'test_list.json')
-ERR_JSON_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'test.json')
+EMPTY_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'empty_file.json')
+TEST_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'test_list.json')
+INVALID_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'invalid_file.json')
 NON_EXISTENT_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'bla_bla_bla.json')
+# EMPTY_FILE = os.path.join(dirname(os.getcwd()), 'empty_file.json')
+# TEST_FILE = os.path.join(dirname(os.getcwd()), 'test_list.json')
+# INVALID_FILE = os.path.join(dirname(os.getcwd()), 'invalid_file.json')
+# NON_EXISTENT_FILE = os.path.join(dirname(os.getcwd()), 'bla_bla_bla.json')
 
+check_empty_list = []
+test_object1 = []
+test_object2 = []
 test_json_list1 = [
   {
     "id": 441945886,
@@ -26,7 +33,6 @@ test_json_list1 = [
     "to": "Счет 64686473678894779589"
   }
 ]
-
 test_json_list2 = [
   {
     "id": 441945886,
@@ -43,11 +49,10 @@ test_json_list2 = [
     "to": "Счет 64686473678894779589"
   }
 ]
-
-test_json_list_err = [
+test_inv_json_list = [
   {
     "idd": 441945886,
-    "state": "EXECUTED",
+    "stat": "EXECUTED",
     "date": "2019-08-26T10:50:58.294041",
     "operationAmount": {
       "amount": "31957.58",
@@ -56,13 +61,11 @@ test_json_list_err = [
         "code": "RUB"
       }
     },
-    "description": "Перевод организации",
-    "from": "Maestro 1596837868705199",
+    "description": "Открытие вклада",
     "to": "Счет 64686473678894779589"
   }
 ]
 
-check_empty_list = []
 
 def test_mask():
     assert mask('Visa Gold 7305799447374042') == 'Visa Gold 7305 79** **** 4042'
@@ -70,7 +73,6 @@ def test_mask():
     assert mask('Счет 97584898735659638967') == 'Счет **8967'
 
 
-test_object1 = []
 @pytest.fixture
 def test_list1():
     o = Operation(test_json_list1[0].get("id"),
@@ -83,7 +85,7 @@ def test_list1():
     test_object1.append(o)
     return test_object1[0]
 
-test_object2 = []
+
 @pytest.fixture
 def test_list2():
     o = Operation(test_json_list2[0].get("id"),
@@ -97,14 +99,6 @@ def test_list2():
     return test_object2[0]
 
 
-def test_class_methods(test_list1):
-    assert test_list1.get_date() == "26.08.2019"
-    assert test_list1.get_description() == "Перевод организации"
-    assert test_list1.get_payer() == "Maestro 1596837868705199"
-    assert test_list1.get_receiver() == "Счет 64686473678894779589"
-    assert test_list1.get_amount() == "31957.58 руб."
-
-
 def test_create_operation_objects():
     assert create_operation_objects(test_json_list1)[0].get_date() == "26.08.2019"
     assert create_operation_objects(test_json_list1)[0].get_description() == "Перевод организации"
@@ -112,15 +106,18 @@ def test_create_operation_objects():
     assert create_operation_objects(test_json_list1)[0].get_receiver() == "Счет 64686473678894779589"
     assert create_operation_objects(test_json_list1)[0].get_amount() == "31957.58 руб."
 
-def test_json_file_check():
-    assert json_file_check(test_json_list1) is True
-    assert json_file_check(test_json_list_err) is False
 
 def test_load_json_file():
-    assert load_json_file(TEST_JSON_FILE) is not None
-    assert load_json_file(EMPTY_JSON_FILE) is None
+    assert load_json_file(TEST_FILE) is not None
+    assert load_json_file(EMPTY_FILE) is None
     assert load_json_file(NON_EXISTENT_FILE) is None
-    assert load_json_file(ERR_JSON_FILE) is None
+    assert load_json_file(INVALID_FILE) is None
+
+
+def test_json_file_check():
+    assert json_list_check(test_json_list1) is True
+    assert json_list_check(test_inv_json_list) is False
+
 
 def test_str_operation(test_list1, test_list2):
     assert (str_operation(test_object1[0]) ==
@@ -128,11 +125,13 @@ def test_str_operation(test_list1, test_list2):
     assert (str_operation(test_object2[0]) ==
             "26.08.2019 Открытие вклада/Счет **9589/31957.58 руб.")
 
+
 def test_print_operations():
     assert print_operations(check_empty_list) is None
 
+
 def test_main():
-    assert main(TEST_JSON_FILE) is True
-    assert main(EMPTY_JSON_FILE) is None
+    assert main(TEST_FILE) is True
+    assert main(INVALID_FILE) is None
+    assert main(EMPTY_FILE) is None
     assert main(NON_EXISTENT_FILE) is None
-    assert main(ERR_JSON_FILE) is None
