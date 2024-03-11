@@ -78,7 +78,7 @@ def json_list_check(operations_list):
     """Проверка структуры объекта банковской операции."""
     if ("id" not in operations_list[0] or "state" not in operations_list[0] or
         "date" not in operations_list[0] or "operationAmount" not in operations_list[0] or
-        "description" not in operations_list[0] or"from" not in operations_list[0] or
+        "description" not in operations_list[0] or "from" not in operations_list[0] or
         "to" not in operations_list[0]):
         return False
     else:
