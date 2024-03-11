@@ -91,7 +91,7 @@ def load_json_file(path):
 def create_operation_objects(path):
     """Получаем список operations_list из json-файла с помощью функции load_json_file.
     Создаем список объектов operations_objects из экземпляров класса Operation и возвращаем его.
-    Если файла не существует или он имеет неверную структуру возвращаем None/"""
+    Если файла не существует или он имеет неверную структуру возвращаем None."""
     operations_list = load_json_file(path)
     if type(operations_list) is list:
         operations_objects = []
