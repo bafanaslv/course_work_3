@@ -4,8 +4,8 @@ import json
 import os
 from os.path import dirname
 
-FILE = 'empty_file.json'
-OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), FILE)
+FILE = 'operations.json'
+OPERATIONS_JSON_FILE = os.path.join(dirname(os.getcwd()), 'data', FILE)
 
 
 class Operation:
