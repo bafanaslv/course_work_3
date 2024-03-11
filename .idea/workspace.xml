@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Добавление комментариев.">
-      <change beforePath="$PROJECT_DIR$/modules/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_code.py" afterDir="false" />
-    </list>
+    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Добавление файла .gitignore." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -361,7 +358,31 @@
       <option name="project" value="LOCAL" />
       <updated>1710164988865</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Добавление комментариев.">
+      <option name="closed" value="true" />
+      <created>1710165663689</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1710165663689</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Добавление комментариев.">
+      <option name="closed" value="true" />
+      <created>1710165717278</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1710165717278</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Добавление файла .gitignore.">
+      <option name="closed" value="true" />
+      <created>1710166309040</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1710166309040</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -399,6 +420,7 @@
     <MESSAGE value="Окончательный вариант тестов." />
     <MESSAGE value="Окончание настройки тестов." />
     <MESSAGE value="Добавление комментариев." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление комментариев." />
+    <MESSAGE value="Добавление файла .gitignore." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление файла .gitignore." />
   </component>
 </project>
