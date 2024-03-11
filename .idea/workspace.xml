@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Добавление файла .gitignore." />
+    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Исправление грубейшей ошибки. Вместо operations.json файла был ткстировочный файл.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -382,7 +384,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710166309040</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Исправление грубейшей ошибки. Вместо operations.json файла был ткстировочный файл.">
+      <option name="closed" value="true" />
+      <created>1710166720481</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1710166720481</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -421,6 +431,7 @@
     <MESSAGE value="Окончание настройки тестов." />
     <MESSAGE value="Добавление комментариев." />
     <MESSAGE value="Добавление файла .gitignore." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление файла .gitignore." />
+    <MESSAGE value="Исправление грубейшей ошибки. Вместо operations.json файла был ткстировочный файл." />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправление грубейшей ошибки. Вместо operations.json файла был ткстировочный файл." />
   </component>
 </project>
