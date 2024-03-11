@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="" />
+    <list default="true" id="444a827c-4be4-4115-a71b-1a673b23cf34" name="Changes" comment="Добавление комментариев.">
+      <change beforePath="$PROJECT_DIR$/modules/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_code.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,10 +20,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="develop" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,14 +40,135 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.pytest for test_code.test_check_quantity.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_class_methods.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_create_operation_objects.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_get.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_get_date.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_json_file_check.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_json_list_check.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_load_json_file.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_mask_card.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_print_operations.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_code.test_str_operation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_load_json_file.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_methods.test_get_date.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_methods.test_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in test_code.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Slava.ZDSHIP/PycharmProjects/Sky-python&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="course_work_3" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/modules" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/modules/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_code.test_json_file_check" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="course_work_3" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_code.test_json_file_check&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_code.test_load_json_file" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="course_work_3" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_code.test_load_json_file&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_code.test_main" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="course_work_3" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_code.test_main&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_code.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="course_work_3" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_code.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.pytest in test_code.py" />
+        <item itemvalue="Python tests.pytest for test_code.test_json_file_check" />
+        <item itemvalue="Python tests.pytest for test_code.test_main" />
+        <item itemvalue="Python tests.pytest for test_code.test_load_json_file" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -58,6 +185,183 @@
       <option name="presentableId" value="Default" />
       <updated>1709225268018</updated>
     </task>
+    <task id="LOCAL-00001" summary="Sorted operation list.">
+      <option name="closed" value="true" />
+      <created>1709475844627</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709475844627</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Сортировка платежей и вывод результов.">
+      <option name="closed" value="true" />
+      <created>1709618993330</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709618993330</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Сортировка платежей и вывод результов.">
+      <option name="closed" value="true" />
+      <created>1709625297516</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709625297516</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Переписан вывод номера карты.">
+      <option name="closed" value="true" />
+      <created>1709625961162</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709625961162</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Переписан вывод номера карты.">
+      <option name="closed" value="true" />
+      <created>1709626150727</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709626150727</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Переписан вывод номера карты.">
+      <option name="closed" value="true" />
+      <created>1709626985628</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709626985628</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Включены тесты на функции">
+      <option name="closed" value="true" />
+      <created>1709648313274</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709648313274</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Включены тесты на методы класса Operations.">
+      <option name="closed" value="true" />
+      <created>1709715966417</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709715966417</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Включены тесты на методы класса Operations.">
+      <option name="closed" value="true" />
+      <created>1709744681918</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709744681918</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Включены тесты на методы класса Operations.">
+      <option name="closed" value="true" />
+      <created>1709745942810</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709745942811</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Исправлен тесты на методы класса Operations.">
+      <option name="closed" value="true" />
+      <created>1709799590742</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709799590742</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Добавление тестов.">
+      <option name="closed" value="true" />
+      <created>1709819370843</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709819370843</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Добавление тестов.">
+      <option name="closed" value="true" />
+      <created>1709823683499</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709823683499</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Настройка тестов.">
+      <option name="closed" value="true" />
+      <created>1709888989020</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1709888989020</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Настройка тестов.">
+      <option name="closed" value="true" />
+      <created>1709889581595</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1709889581595</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Настройка тестов.">
+      <option name="closed" value="true" />
+      <created>1709922215265</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1709922215265</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Окончание настройки тестов.">
+      <option name="closed" value="true" />
+      <created>1709927372831</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1709927372831</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Окончание настройки тестов.">
+      <option name="closed" value="true" />
+      <created>1709927927220</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1709927927220</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Окончание настройки тестов.">
+      <option name="closed" value="true" />
+      <created>1709956583636</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1709956583636</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Окончательный вариант тестов.">
+      <option name="closed" value="true" />
+      <created>1709962924201</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1709962924201</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Окончание настройки тестов.">
+      <option name="closed" value="true" />
+      <created>1710044003550</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1710044003550</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Добавление комментариев.">
+      <option name="closed" value="true" />
+      <created>1710164988865</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1710164988865</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -65,10 +369,36 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Sorted operation list." />
+    <MESSAGE value="Сортировка платежей и вывод результов." />
+    <MESSAGE value="Переписан вывод номера карты." />
+    <MESSAGE value="Включены тесты на функции" />
+    <MESSAGE value="Включены тесты на методы класса Operations." />
+    <MESSAGE value="Исправлен тесты на методы класса Operations." />
+    <MESSAGE value="Добавление тестов." />
+    <MESSAGE value="Настройка тестов." />
+    <MESSAGE value="Окончательный вариант тестов." />
+    <MESSAGE value="Окончание настройки тестов." />
+    <MESSAGE value="Добавление комментариев." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление комментариев." />
   </component>
 </project>
