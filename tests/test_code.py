@@ -2,7 +2,7 @@ import pytest
 import os
 from os.path import dirname
 from modules.main import main, create_operation_objects, mask, Operation, str_operation
-from modules.main import load_json_file, json_list_check, print_operations
+from modules.main import load_json_file, json_list_check
 
 EMPTY_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'empty_file.json')
 TEST_FILE = os.path.join(dirname(os.getcwd()), 'course_work_3', 'test_list.json')
@@ -121,8 +121,8 @@ def test_load_json_file():
 
 def test_json_file_check():
     """Проверка структуры загруженного json - файла."""
-    assert json_list_check(test_json_list1) is True
-    assert json_list_check(test_inv_json_list) is False
+    assert json_list_check(test_json_list1)
+    assert not json_list_check(test_inv_json_list)
 
 
 def test_str_operation(test_list1, test_list2):
@@ -134,12 +134,8 @@ def test_str_operation(test_list1, test_list2):
             "26.08.2019 Открытие вклада/Счет **9589/31957.58 руб.")
 
 
-def test_print_operations():
-    assert print_operations(check_empty_list) is None
-
-
 def test_main():
-    assert main(TEST_FILE) is True
+    assert main(TEST_FILE)
     assert main(INVALID_FILE) is None
     assert main(EMPTY_FILE) is None
     assert main(NON_EXISTENT_FILE) is None
